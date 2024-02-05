@@ -111,6 +111,16 @@ export class AppComponent {
   }
 
   checkstatus() {
+    if (this.count == 2) {
+      let filter = this.card.filter(item => item.status === true)
+      if (filter[0].img !== filter[1].img) {
+        this.result = "You lose"
+        setTimeout(() => {
+          this.openDialog()
+        }, 100);
+      }
+      return
+    }
     if (this.count == 3) {
       let filter = this.card.filter(item => item.status === true)
       console.log(filter)
