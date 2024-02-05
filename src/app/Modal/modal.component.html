@@ -1,0 +1,8 @@
+<h2 class="text-center text-3xl m-3 text-green-600">{{ data }}</h2>
+<mat-dialog-content> </mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>
+    Play Again
+  </button>
+</mat-dialog-actions>
